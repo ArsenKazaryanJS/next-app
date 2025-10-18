@@ -3,7 +3,6 @@ import getUsers from "@/services/getUsers";
 
 const UsersPage = async () => {
   const users = await getUsers();
-  console.log(users);
 
   return (
     <section className="content">
