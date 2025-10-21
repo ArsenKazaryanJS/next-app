@@ -1,12 +1,14 @@
+import { createMessageGreeting, messageApiModul } from "@/app/lib/open";
 import { NextResponse } from "next/server";
 
 export async function GET(){
-    return NextResponse.json({message:'Hello, from API!'})
+    const data = messageApiModul()
+    return NextResponse.json(data)
 }
 
 
 export async function POST(req) {
-    const data = await req.json()
-    const {message} = data
-   return NextResponse.json({message:`Hello,${message} from API!`})
+    const {message} = await req.json()
+    const greeting = createMessageGreeting(message)
+   return NextResponse.json(greeting)
 }

@@ -3,10 +3,8 @@ import { getMessageFromApi } from "@/services/getMessageFromApi";
 import React from "react";
 
 const Button = () => {
-
   const handleMessage = async () => {
     const { message } = await getMessageFromApi();
-    
     alert(message)
   };
 

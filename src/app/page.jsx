@@ -1,11 +1,11 @@
 import Button from "@/components/Button";
-import { getMessageFromApi } from "@/services/getMessageFromApi";
+// import { getMessageFromApi } from "@/services/getMessageFromApi";
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 
 export default async function Home() {
-  const {message} = await getMessageFromApi()
+  // const {message} = await getMessageFromApi()
 
   return (
     <div className="content">
